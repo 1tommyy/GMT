@@ -1,0 +1,22 @@
+<span id="a">root@gmtstudios</span>:<span id="b">~</span><span id="c">$</span> cd home/users/gmt/
+<span id="a">root@gmtstudios</span>:<span id="b">~</span><span id="c">$</span> ls
+info.txt socials.txt
+<span id="a">root@gmtstudios</span>:<span id="b">~</span><span id="c">$</span> info.txt<br/><br/>
+<p><b>Info</b> 
+
+Name: GMT RP
+Established: december 2024
+Location: United Kingdom
+Founders: Taylor | Dr Dru
+Developer: Tommy
+Loading Song:  - Polo G - Champagne Papi</p>
+
+<span id="a">root@gmtstudios</span>:<span id="b">~</span><span id="c">$</span> socials.txt<br/><br/>
+<p><b>Socials</b>
+
+<i class="fab fa-twitter"></i> <a href="https://twitter.com/gmtstudios">@gmtstudios</a>
+<i class="fab fa-tiktok"></i> <a href="https://tiktok.com/@gmtstudios">@gmtstudios</a>
+<i class="fab fa-discord"></i> <a href="https://discord.gg/gmtrp">discord.gg/gmtrp</a>
+<i class="fa fa-globe"></i> <a href="https://gmtstudios.uk">gmtstudios.uk</a>
+
+<p><small>Copyright <i class="fa fa-copyright"></i> 2023 - <a href="#">https://gmtstudios.uk</a></small></p>

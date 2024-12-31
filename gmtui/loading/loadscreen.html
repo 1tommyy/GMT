@@ -1,0 +1,233 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GMT | Loadingscreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="loadscreen.css">
+    <link href="snow.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+    <script src="https://kit.fontawesome.com/5230b87648.js"></script>
+    <link rel="stylesheet" type="text/css" href="terminal/index.css">
+    <script type="text/javascript" src="terminal/index.js"></script>
+    <style>
+        .lead-developer-text {
+            display: flex; 
+            align-items: center; 
+            position: fixed;
+            bottom: -1%; 
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: bold; 
+            font-size: 40px;
+            opacity: 0;
+            animation: flyInOut 19s ease-in-out forwards; 
+            color: #888888;
+        }
+
+        .lead-developer-text img {
+            margin-left: 10px; 
+            width: 30px;
+            height: auto; 
+        }
+
+        .tips {
+            position: absolute;
+            bottom: 2%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: rgb(0, 119, 255); 
+            text-align: center;
+            display: none; 
+        }
+
+        @keyframes flyInOut {
+            0% {
+                bottom: -100%; 
+                opacity: 0;
+            }
+            50% {
+                bottom: 5%; 
+                opacity: 1;
+            }
+            100% {
+                bottom: -100%; 
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="overcast"></div>
+    <div class="progress"></div>
+    <!-- <div class="lead-developer-text">
+        Lead Developer / stripbar#0 <img src="https://cdn.discordapp.com/attachments/1039220780862558258/1161107056682606622/9c0a71f73244d737aea1b397c93b9220.png?ex=65371836&is=6524a336&hm=57e4a26d2e32f40de848d4a6fbdf5335ccfc3315fff2dc5eaf763d7a85ab630d&" alt="Developer Image">
+    </div> -->
+    
+    <div class="tips" id="tips">
+        <span id="tipText"></span>
+    </div>
+    
+    <!-- valentines  -->
+    <!-- <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+        <div class="snowflake">
+            ❤
+        </div>
+    </div> -->
+
+    <!-- xmas  -->
+    <!-- <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❄
+        </div>
+    </div> -->
+
+    <!-- halloween  -->
+    <!-- <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+        <div class="snowflake">
+            🎃
+        </div>
+    </div> -->
+    
+    <div class="anim">
+        <img src="logo.png">
+    </div>
+    <div id="console"></div> 
+
+    <audio id="leson" src="music.mp3" autoplay="false" hidden="true" loop="true"></audio>
+    
+    <script>
+        var play = true;
+        var myAudio = document.getElementById("leson");
+        myAudio.volume = 0.3;
+    
+        function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 32: //SpaceBar                    
+                    if (play) {
+                        myAudio.pause();
+                        play = false;
+                    } else {
+                        myAudio.play();
+                        play = true;
+                    }
+                    break;
+            }
+            return false;
+        }
+    
+        window.addEventListener("keydown", onKeyDown, false);
+    
+        var tips = [
+            "Tip 1: Press F5 to access your gang menu.",
+            "Tip 2: Press F2 to access the settings menu.",
+            "Tip 3: Need any help around the city? Feel free to do /calladmin.",
+            "Tip 4: Any issues with your rank/donation open a ticket in the support discord.",
+            "Tip 5: Practice kindness and empathy in your daily interactions.",
+            "Tip 6: Press Home to see a list of online players and staff.",
+            "Tip 7: To join the Met Police, head over to the discord and look for the channel #police-info."
+        ];
+    
+        var tipContainer = document.getElementById("tips");
+        var tipText = document.getElementById("tipText");
+        var tipIndex = 0;
+    
+        function displayNextTip() {
+            tipText.textContent = tips[tipIndex];
+            tipContainer.style.display = "block";
+            tipIndex = (tipIndex + 1) % tips.length;
+        }
+    
+        // Display the first tip immediately
+        displayNextTip();
+    
+        // Change the tip every 10 seconds
+        setInterval(displayNextTip, 10000);
+    </script>
+</body>
+</html>
