@@ -1,0 +1,1109 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@font-face {
+  font-family: "Akrobat-Black";
+  src: url("Akrobat-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat-ExtraBold";
+  src: url("Akrobat-ExtraBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat-Bold";
+  src: url("Akrobat-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat-Regular";
+  src: url("Akrobat-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Akrobat-SemiBold";
+  src: url("Akrobat-SemiBold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --gmtHover: rgba(33, 255, 225, 0.6);
+  --gmtSecondGr: rgba(33, 255, 225, 0.3);
+  --gmtMainGr: rgba(33, 255, 225, 1);
+  --gmtHoverGr: rgba(0, 160, 152, 0.315);
+}
+#gmtRoot {
+  width: 100vw;
+  height: 100vh;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+}
+#gmtOverlay {
+  width: 100%;
+  height: 100%;
+  margin-top: -1%;
+  background-image: url("../assets/gmtBackground.png");
+}
+#gmtLogo {
+  position: fixed;
+  width: 8.542vw;
+  height: 8.708vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0vw;
+  background-image: url("../assets/gmtLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gmtPauseM {
+  width: 74.479vw;
+  height: 41.146vw;
+  position: fixed;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+}
+#gmtPmAbout {
+  position: absolute;
+  width: 18.229vw;
+  height: 14.583vw;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0.521vw;
+  overflow: auto;
+}
+#gmtPmAbLine {
+  position: absolute;
+  width: 0.313vw;
+  height: 2.083vw;
+  background-color: var(--gmtMainGr);
+  top: 1.302vw;
+  border-radius: 0vw 0.521vw 0.521vw 0vw;
+}
+#gmtPmAbTitle {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 1.302vw;
+  left: 1.302vw;
+  color: white;
+  font-weight: 600;
+  font-size: 1.146vw;
+  font-family: Akrobat-ExtraBold;
+}
+#gmtPmAbDesc {
+  position: absolute;
+  font-size: 0.729vw;
+  font-family: Akrobat-Bold;
+  color: white;
+  width: 15.625vw;
+  height: fit-content;
+  top: 3.906vw;
+  left: 1.302vw;
+  overflow: auto;
+}
+#gmtPmPlayers {
+  position: absolute;
+  width: 53.646vw;
+  height: 4.167vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  left: 20.833vw;
+}
+#gmtPmNav {
+  position: absolute;
+  width: 20.229vw;
+  height: fit-content;
+  top: -1.6vw;
+  display: flex;
+  margin-left: 55.502vw;
+  flex-direction: column;
+  gap: 1.199vw;
+}
+#gmtPmRow {
+  position: absolute;
+  width: 82.95vw;
+  height: fit-content;
+  top: 32.5vw;
+  display: flex;
+  margin-left: -3.95vw;
+  flex-direction: row;
+  gap: 0.999vw;
+}
+.gmtPmNavCont {
+  position: relative;
+  width: 115%;
+  height: 4.2vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  opacity: 0.9;
+}
+.gmtNavRow {
+  position: relative;
+  width: 100%;
+  height: 5.208vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  opacity: 0.9;
+}
+.gmtDiscord {
+  position: relative;
+  width: 34%;
+  height: 2.808vw;
+  border-radius: 0.5vw;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  margin-top: 4.5vw;
+  margin-left: 1.2vw;
+}
+.gmtPCount {
+  position: relative;
+  width: 34%;
+  height: 2.808vw;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5vw;
+  opacity: 0.9;
+  margin-top: 1.1vw;
+  margin-left: 1.2vw;
+}
+.gmtconnect {
+  position: relative;
+  width: 34%;
+  height: 2.808vw;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  border-radius: 0.5vw;
+  margin-top: 1.1vw;
+  margin-left: 1.2vw;
+}
+.gmtDiscord,
+#gmtCuBbox,
+.gmtPmBox2,
+.gmtPmBox3,
+.gmtconnect,
+.gmtNavRow,
+.gmtPmNavCont {
+  transition: all 0.2s ease-in-out;
+}
+#gmtCsettings,
+#Store,
+#gmtCuBbox,
+#twitter,
+#dispute,
+#website,
+.gmtPmBox3,
+.gmtPmBox2,
+#gmtCmap,
+#gmtCdisconnect {
+  cursor: pointer;
+}
+.gmtDiscord:hover,
+.gmtPmBox3:hover,
+.gmtPmBox2:hover,
+#gmtCuBbox:hover,
+.gmtconnect:hover,
+.gmtNavRow:hover,
+.gmtPmNavCont:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+.gmtPmNavLine {
+  position: absolute;
+  width: 0.313vw;
+  height: 2.604vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gmtPmNavIcon {
+  position: absolute;
+  width: 2.083vw;
+  height: 2.083vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1.302vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gmtPmPlayerIcon {
+  position: absolute;
+  width: 2.083vw;
+  height: 2.083vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1.302vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gmtPmAssetIcon {
+  position: absolute;
+  width: 2.083vw;
+  height: 2.083vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1.302vw;
+  top: 47%;
+  transform: translateY(-50%);
+}
+.gmtPmNavTxt {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-family: Akrobat-ExtraBold;
+  margin-left: 4.167vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gmtPmRowTxt {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-family: Akrobat-ExtraBold;
+  margin-left: 4.167vw;
+  top: 56%;
+  transform: translateY(-50%);
+}
+.gmtCsButtons {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 4.167vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gmtPmNavTxt h1 {
+  font-size: 1.25vw;
+  font-family: Akrobat-ExtraBold;
+  color: white;
+}
+.gmtPmRowTxt h1 {
+  font-size: 1.25vw;
+  font-family: Akrobat-ExtraBold;
+  color: white;
+}
+.gmtPmNavTxt h2 {
+  font-size: 0.729vw;
+  font-weight: normal;
+  font-family: Akrobat-ExtraBold;
+  margin-top: -0.26vw;
+}
+.gmtPmRowTxt h2 {
+  font-size: 0.729vw;
+  font-family: Akrobat-ExtraBold;
+  font-weight: normal;
+  margin-top: -0.26vw;
+}
+#gmtPmPlLine {
+  position: absolute;
+  width: 0.313vw;
+  height: 2.083vw;
+  background-color: var(--gmtMainGr);
+  border-radius: 0vw 0.521vw 0.521vw 0vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#gmtPmPlTxt {
+  position: absolute;
+  width: fit-content;
+  font-family: Akrobat-ExtraBold;
+  height: fit-content;
+  font-size: 1.042vw;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1.563vw;
+  font-weight: 400;
+  color: white;
+}
+.gmtPmBlock {
+  position: absolute;
+  width: 37.6vw;
+  height: 14.975vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  left: 16.61vw;
+}
+.gmtPmBlock2 {
+  position: absolute;
+  width: 37.6vw;
+  height: 16.575vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  left: 16.61vw;
+  margin-top: -1vw;
+}
+.gmtPmTitle {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: #088bdd;
+  font-family: "Akrobat-Black";
+  font-size: 2.2em;
+  left: 1.502vw;
+  top: 0.601vw;
+}
+.gmtPmDate {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 0.755vw;
+  font-family: Akrobat-Regular;
+  font-weight: bold;
+  left: 28.902vw;
+  top: 1.981vw;
+}
+.todaysDate {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 1.255vw;
+  font-family: Akrobat-Bold;
+  font-weight: bold;
+  left: 27.502vw;
+  top: 0.881vw;
+}
+.todaysDateTitle {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 0.855vw;
+  font-family: Akrobat-Black;
+  font-weight: bold;
+  left: 31.902vw;
+  top: 0.581vw;
+}
+.glow-box {
+  width: 0.4vw;
+  height: 0.4vw;
+  background-color: #95df4d;
+  box-shadow: 0 0 0.2vw 0.1vw #95df4d;
+  margin-top: 33.1%;
+  margin-left: 86.1%;
+}
+.glow-box2 {
+  width: 0.4vw;
+  height: 0.4vw;
+  background-color: #95df4d;
+  box-shadow: 0 0 0.2vw 0.1vw #95df4d;
+  margin-top: -13%;
+  margin-left: 9.1%;
+}
+.totalPlayers {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 1.2em;
+  font-family: Akrobat-Black;
+  font-weight: bold;
+  left: 33.202vw;
+  top: 11.981vw;
+}
+.gmtPmDisc {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  font-size: 0.677vw;
+  font-family: Akrobat-Bold;
+  left: 1.702vw;
+  top: 2.5vw;
+}
+.gmtPmBox {
+  position: absolute;
+  width: 34.05vw;
+  height: 10.554vw;
+  background-color: rgba(14, 20, 23, 0.25);
+  border-radius: 0.3vw;
+  top: 3.208vw;
+  margin-left: -0.8vw;
+}
+.gmtPmBox2 {
+  position: absolute;
+  width: 34.25vw;
+  height: 4.854vw;
+  background-color: rgba(14, 20, 23, 0.25);
+  border-radius: 0.3vw;
+  top: 4.008vw;
+  margin-left: -0.7vw;
+  opacity: 0.9;
+}
+.gmtPmBox3 {
+  position: absolute;
+  width: 34.25vw;
+  height: 4.854vw;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.3vw;
+  top: 10.008vw;
+  margin-left: -7.908vw;
+  opacity: 0.9;
+}
+.gmtPmBox3:hover {
+  opacity: 1;
+}
+.gmtPmBox2:hover {
+  opacity: 1;
+}
+.gmtPmBoxTxt {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 51%;
+  transform: translateY(-50%);
+  left: 0.781vw;
+  font-family: Akrobat-Black;
+  font-size: 1.554vw;
+}
+.gmtPmBoxTxt h1 {
+  font-size: 1.425vw;
+  font-family: Akrobat-Black;
+  font-weight: normal;
+  color: white;
+  margin-top: -19%;
+}
+.gmtPmBoxTxt h2 {
+  font-size: 1.929vw;
+  font-weight: normal;
+  color: white;
+  font-family: Akrobat-Black;
+  margin-bottom: 0.02vw;
+}
+.gmtPmMiniBlock {
+  position: absolute;
+  width: 23.5vw;
+  height: 16.513vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  left: 55.46vw;
+  top: 41.625vw;
+  margin-top: -2.85vw;
+}
+.gmtPmMLine {
+  position: absolute;
+  width: 2.604vw;
+  height: 0.313vw;
+  border-radius: 0vw 0vw 0.521vw 0.521vw;
+  left: 1.042vw;
+  opacity: 0.5;
+}
+.gmtPmMTxt {
+  position: absolute;
+  width: fit-content;
+  font-family: Akrobat-Bold;
+  height: fit-content;
+  top: 2.581vw;
+  left: 1.202vw;
+}
+.gmtPmMTxt h1 {
+  color: white;
+  font-family: Akrobat-Bold;
+  font-size: 1.354vw;
+  font-weight: bold;
+}
+.PlayersName {
+  color: white;
+  font-size: 2.8em;
+  font-family: "Akrobat-Black";
+}
+.gmtPmMTxt h2 {
+  font-size: 0.977vw;
+  font-weight: normal;
+  margin-top: -0.117vw;
+  margin-left: 0.2vw;
+}
+.gmtPmMTxt2 {
+  position: absolute;
+  width: fit-content;
+  font-family: Akrobat-Bold;
+  height: fit-content;
+  top: 0.581vw;
+  font-family: Akrobat-Black;
+  font-size: 1.754vw;
+  left: 1.302vw;
+}
+.gmtPmMTxt2 h1 {
+  color: white;
+  font-family: Akrobat-Black;
+  font-size: 1.554vw;
+  font-weight: bold;
+}
+.gmtPmMTxt2 h2 {
+  font-size: 0.977vw;
+  font-weight: normal;
+  margin-top: -0.117vw;
+  margin-left: 0.2vw;
+}
+.gmtCircleButton {
+  position: absolute;
+  width: 1.563vw;
+  height: 1.563vw;
+  border-radius: 100%;
+  opacity: 0.5;
+  left: 12.344vw;
+  top: 4.948vw;
+}
+.gmtCircleButton:hover {
+  opacity: 1;
+}
+.gmtCBarr {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/gmtArrows.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gmtLinkBox {
+  position: absolute;
+  width: 18.854vw;
+  height: 10.417vw;
+  top: 19.771vw;
+  left: -0.5vw;
+}
+.gmtLBline1 {
+  position: absolute;
+  width: 0.313vw;
+  height: 6.25vw;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0.521vw 0vw 0vw 0.521vw;
+  opacity: 0.5;
+}
+.gmtLBcont {
+  position: absolute;
+  width: 18.229vw;
+  height: 100%;
+  background-color: rgba(4, 12, 23, 0.45);
+  left: 0.313vw;
+}
+.gmtLBline2 {
+  position: absolute;
+  width: 0.313vw;
+  height: 6.25vw;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0vw 0.521vw 0.521vw 0vw;
+  opacity: 0.5;
+  left: 18.542vw;
+}
+.gmtLBicon {
+  position: absolute;
+  width: 2.083vw;
+  height: 2.083vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2.083vw;
+}
+.gmtLBtext {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 0.729vw;
+  font-family: Akrobat-ExtraBold;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 4.427vw;
+}
+.gmtLBbtn {
+  position: absolute;
+  width: 7.813vw;
+  height: 2.083vw;
+  border-radius: 0.313vw;
+  font-family: Akrobat-ExtraBold;
+  background-color: var(--gmtSecondGr);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 0.625vw;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6.25vw;
+}
+.gmtLBbtn:hover {
+  background-color: var(--gmtHover);
+}
+#gmtCustomBox {
+  position: absolute;
+  width: 18.129vw;
+  height: 11.042vw;
+  top: 0vw;
+  left: -3.9vw;
+}
+#gmtCuBLine1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7.292vw;
+  height: 0.313vw;
+  background-color: #088bdd;
+  opacity: 0.5;
+  z-index: 9999;
+}
+#gmtCuBbox {
+  position: absolute;
+  width: 107%;
+  height: 33vw;
+  background-color: rgba(4, 12, 23, 0.45);
+  top: -1.6vw;
+}
+#gmtCuBtitle {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  font-size: 2.75vw;
+  font-weight: bold;
+  font-family: Akrobat-ExtraBold;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2.523vw;
+  text-align: center;
+}
+#gmtCuBdisc {
+  position: absolute;
+  width: 57%;
+  height: auto;
+  font-size: 0.85vw;
+  font-family: Akrobat-Regular;
+  font-weight: normal;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(22, 22, 22, 0.4);
+  border-radius: 0.521vw;
+  top: 10.646vw;
+  text-align: center;
+  padding: 5px;
+}
+#gmtCuBbtn {
+  position: absolute;
+  width: 5.875vw;
+  height: 1.583vw;
+  border-radius: 0.513vw;
+  background-color: #088bdd;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 0.805vw;
+  font-family: Akrobat-Bold;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6.25vw;
+}
+#gmtCuBbtn:hover {
+  background-color: #088bdd;
+}
+.gmtBoldClr {
+  font-weight: bold;
+  color: var(--gmtMainGr);
+}
+.gmtTop1 {
+  top: -1.6vw;
+}
+.gmtTop2 {
+  top: 15.779vw;
+}
+.gmtTop3 {
+  top: 17.642vw;
+}
+.gmtTop4 {
+  top: 30.729vw;
+}
+.gmtLeft1 {
+  left: 2.188vw;
+}
+.gmtLeft2 {
+  left: 9.479vw;
+}
+.gmtLeft3 {
+  left: 16.771vw;
+  width: 4.167vw;
+}
+.gmtLeft4 {
+  left: 21.979vw;
+  width: 8.333vw;
+}
+.gmtLeft5 {
+  left: 57.604vw;
+}
+.gmtLeft6 {
+  left: 1.094vw;
+}
+.gmtLeft7 {
+  left: 8.385vw;
+}
+.gmtLeft8 {
+  left: 37.604vw;
+}
+@media (min-width: 3840px) and(min-height:1200px) {
+  #gmtLogo {
+    width: 265px;
+    height: 84px;
+    top: 60px;
+  }
+  #gmtPauseM {
+    width: 1430px;
+    height: 790px;
+  }
+  #gmtPmAbout {
+    width: 350px;
+    height: 280px;
+  }
+  #gmtPmAbLine {
+    width: 6px;
+    height: 40px;
+    top: 25px;
+    border-radius: 0 10px 10px 0;
+    overflow: auto;
+  }
+  #gmtPmAbTitle {
+    top: 25px;
+    left: 25px;
+    font-size: 22px;
+    font-family: Akrobat-ExtraBold;
+  }
+  #gmtPmAbDesc {
+    font-size: 14px;
+    font-family: Akrobat-Bold;
+    width: 300px;
+    top: 75px;
+    left: 25px;
+  }
+  #gmtPmPlayers {
+    width: 1030px;
+    height: 80px;
+    border-radius: 10px;
+    left: 400px;
+  }
+  #gmtPmNav {
+    width: 350px;
+    top: 330px;
+    gap: 20px;
+  }
+  .gmtPmNavCont {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Akrobat-ExtraBold;
+    margin-left: 30px;
+  }
+  .gmtNavRow {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Akrobat-ExtraBold;
+    margin-left: 30px;
+  }
+  .discordBtn {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Akrobat-Bold;
+    margin-left: 30px;
+  }
+  .gmtPmBlock {
+    width: 624px;
+    height: 150px;
+    left: 400px;
+    top: 100px;
+    background-color: rgba(14, 20, 23, 0.25);
+  }
+  .gmtPmLine {
+    width: 6px;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    top: 20px;
+  }
+  .gmtPmTitle {
+    font-size: 29px;
+    font-family: Akrobat-Black;
+    left: 25px;
+    top: 15px;
+  }
+  .gmtPmDate {
+    font-size: 10px;
+    font-family: Akrobat-Black;
+    left: 25px;
+    top: 15px;
+  }
+  .todaysDate {
+    font-size: 10px;
+    font-family: Akrobat-Black;
+    left: 25px;
+    top: 15px;
+  }
+  .todaysDateTitle {
+    font-size: 10px;
+    font-family: Akrobat-Black;
+    left: 25px;
+    top: 15px;
+  }
+  .totalPlayers {
+    font-size: 10px;
+    font-family: Akrobat-Black;
+    left: 25px;
+    top: 15px;
+  }
+  .gmtPmDisc {
+    font-size: 13px;
+    font-family: Akrobat-Bold;
+    left: 25px;
+    top: 48px;
+  }
+  .gmtPmBox {
+    width: 120px;
+    height: 50px;
+    top: 100px;
+    border-radius: 10px 10px 0 0;
+  }
+  .gmtPmBoxTxt {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+  .gmtPmBoxTxt h1 {
+    font-size: 12px;
+    font-family: Akrobat-ExtraBold;
+  }
+  .gmtPmBoxTxt h2 {
+    font-size: 14px;
+    font-family: Akrobat-ExtraBold;
+    margin-top: -5px;
+  }
+}
+.gmtPmNavLine {
+  width: 6px;
+  height: 60px;
+  border-radius: 10px 10px 10px 10px;
+}
+.gmtPmNavIcon {
+  width: 41px;
+  height: 46px;
+  margin-left: 25px;
+}
+.gmtPmAssetIcon {
+  width: 35px;
+  height: 34px;
+  margin-left: 10px;
+}
+.gmtPmPlayerIcon {
+  width: 35px;
+  height: 27px;
+  margin-left: 10px;
+}
+.gmtPmNavTxt {
+  font-family: Akrobat-ExtraBold;
+  margin-left: 80px;
+}
+.gmtPmRowTxt {
+  margin-left: 100px;
+}
+.gmtCsButtons {
+  font-size: 8px;
+  margin-left: 55px;
+  height: 38px;
+}
+.gmtPmNavTxt h1 {
+  font-size: 28px;
+  font-family: Akrobat-Black;
+}
+.gmtPmRowTxt h1 {
+  font-size: 35px;
+  font-family: Akrobat-ExtraBold;
+}
+.gmtCsButtons h1 {
+  font-size: 18px;
+  font-family: Akrobat-Black;
+  margin-bottom: -5px;
+}
+.gmtPmNavTxt h2 {
+  font-size: 14px;
+  font-family: Akrobat-Regular;
+  margin-top: -5px;
+}
+.gmtPmRowTxt h2 {
+  font-size: 23px;
+  font-family: Akrobat-Bold;
+  margin-top: -8px;
+  margin-left: 1px;
+}
+#gmtPmPlLine {
+  position: absolute;
+  width: 6px;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+}
+#gmtPmPlTxt {
+  .gmtPmMiniBlock {
+    width: 302px;
+    height: 150px;
+    border-radius: 10px;
+    left: 400px;
+    top: 300px;
+  }
+  .gmtPmMLine {
+    width: 50px;
+    height: 6px;
+    border-radius: 0 0 10px 10px;
+    left: 20px;
+    opacity: 0.5;
+  }
+  .gmtPmMTxt {
+    top: 15px;
+    left: 25px;
+  }
+  .gmtPmMTxt h1 {
+    font-size: 26px;
+    font-family: Akrobat-Bold;
+  }
+  .gmtPmMTxt h2 {
+    font-size: 13px;
+    font-family: Akrobat-Bold;
+    margin-top: -8px;
+  }
+  .gmtPmMTxt2 {
+    top: 15px;
+    left: 25px;
+  }
+  .gmtPmMTxt2 h1 {
+    font-size: 36px;
+    font-family: Akrobat-Black;
+  }
+  .gmtPmMTxt2 h2 {
+    font-size: 25px;
+    font-family: Akrobat-Black;
+    margin-top: -8px;
+  }
+  .gmtCircleButton {
+    width: 30px;
+    height: 30px;
+    left: 237px;
+    top: 95px;
+  }
+  .gmtLinkBox {
+    width: 362px;
+    height: 200px;
+    top: 130px;
+    left: 1075px;
+  }
+  .gmtLBline1 {
+    width: 6px;
+    height: 120px;
+    border-radius: 10px 0 0 10px;
+  }
+  .gmtLBcont {
+    width: 350px;
+    border-radius: 10px;
+    left: 6px;
+  }
+  .gmtLBline2 {
+    width: 6px;
+    height: 120px;
+    transform: translateY(-50%);
+    border-radius: 0 10px 10px 0;
+    left: 356px;
+  }
+  .gmtLBicon {
+    width: 40px;
+    height: 40px;
+    top: 40px;
+  }
+  .gmtLBtext {
+    font-size: 14px;
+    top: 85px;
+    font-family: Akrobat-ExtraBold;
+  }
+  .gmtLBbtn {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: Akrobat-ExtraBold;
+    top: 120px;
+  }
+  #gmtCustomBox {
+    width: 350px;
+    height: 212px;
+    top: 354px;
+    left: 1081px;
+  }
+  #gmtCuBLine1 {
+    width: 140px;
+    height: 6px;
+    border-radius: 10px 10px 0 0;
+  }
+  #gmtCuBbox {
+    height: 200px;
+    border-radius: 10px;
+    top: 6px;
+  }
+  #gmtCuBLine2 {
+    width: 140px;
+    height: 6px;
+    border-radius: 0 0 10px 10px;
+    top: 206px;
+  }
+  #gmtCuBtitle {
+    font-size: 55px;
+    font-family: Akrobat-Black;
+    top: 35px;
+  }
+  #gmtCuBdisc {
+    font-size: 12px;
+    font-family: Akrobat-Regular;
+    top: 70px;
+  }
+  #gmtCuBbtn {
+    width: 180px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: Akrobat-Bold;
+    top: 120px;
+  }
+  .gmtTop1 {
+    top: 130px;
+  }
+  .gmtTop2 {
+    top: 470px;
+  }
+  .gmtTop3 {
+    top: 640px;
+  }
+  .gmtTop4 {
+    top: 590px;
+  }
+  .gmtLeft1 {
+    left: 42px;
+  }
+  .gmtLeft2 {
+    left: 182px;
+  }
+  .gmtLeft3 {
+    left: 322px;
+    width: 80px;
+  }
+  .gmtLeft4 {
+    left: 422px;
+    width: 160px;
+  }
+  .gmtLeft5 {
+    left: 722px;
+  }
+  .gmtLeft6 {
+    left: 21px;
+  }
+  .gmtLeft7 {
+    left: 161px;
+  }
+  .gmtLeft8 {
+    left: 722px;
+  }
+}
